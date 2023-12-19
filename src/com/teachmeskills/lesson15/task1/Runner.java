@@ -23,14 +23,13 @@ public class Runner {
 
     public static void main(String[] args) {
 
+        List<Integer> listNumber = new ArrayList<>();
+
+        Scanner scanner = new Scanner(System.in);
+
         try {
-            List<Integer> listNumber = new ArrayList<>();
-
-            Scanner scanner = new Scanner(System.in);
-
             while (true) {
                 System.out.println("Enter a number or to exit enter (exit) ");
-
                 String number = scanner.nextLine();
 
                 if (number.equals("exit")){
@@ -44,15 +43,17 @@ public class Runner {
                 listNumber.add(Integer.valueOf(number));
 
             }
-
-            for (Integer number : listNumber) {
-                if (number % 2 == 0) {
-                    System.out.println(number);
-                }
-            }
         } catch (NumberFormatException e) {
             System.out.println("This is not a number");
         }
+
+        for (Integer number : listNumber) {
+            if (number % 2 == 0) {
+                System.out.println(number);
+            }
+        }
+
+
 
     }
 

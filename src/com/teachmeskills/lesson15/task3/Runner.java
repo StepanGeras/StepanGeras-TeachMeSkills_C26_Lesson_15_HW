@@ -29,7 +29,7 @@ public class Runner {
 
             System.out.println("Enter size list");
 
-            int size = scanner.nextInt();
+            int size = Integer.parseInt(scanner.nextLine());
 
             List<Integer> listNumber = new ArrayList<>(size);
 
@@ -44,6 +44,8 @@ public class Runner {
 
         } catch (InputMismatchException e){
             System.out.println("The size is not correction");
+        } catch (NumberFormatException e) {
+            System.out.println("Input error");
         }
 
     }
