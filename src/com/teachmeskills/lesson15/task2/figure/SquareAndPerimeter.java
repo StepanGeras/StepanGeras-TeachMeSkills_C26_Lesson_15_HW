@@ -7,7 +7,6 @@ public abstract class SquareAndPerimeter {
     public SquareAndPerimeter(String name){
         this.name = name;
     }
-    public abstract double Square();
 
     public abstract double Perimeter();
 
